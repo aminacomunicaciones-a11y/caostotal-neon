@@ -77,8 +77,8 @@ La web lleva **exactamente 4 imágenes**, las que entregó Faussi el 2026-08-10
 |---|---|---|
 | `banner.webp` | Banner con el rótulo del juego y el pulpo mascota | La portada |
 | `captura-menu.webp` | Menú principal, mapa 1 Bosque de Silicio | Galería |
-| `captura-anillos.webp` | Combate con anillos rúnicos en tormenta | Galería |
-| `captura-slimes.webp` | Combate contra la horda verde | Galería |
+| `captura-jefe-laseres.webp` | Jefe bajo fuego cruzado, arena roja | Galería |
+| `captura-jefe-enjambre.webp` | Jefa medusa rodeada de esbirros | Galería |
 
 > ⚠️ **Ninguna imagen puede llevar la marca de agua de Gemini.** Las tres capturas de
 > la galería se cambiaron el 2026-08-10 justo por eso: dos de las anteriores traían el
