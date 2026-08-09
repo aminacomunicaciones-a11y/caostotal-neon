@@ -76,9 +76,14 @@ La web lleva **exactamente 4 imágenes**, las que entregó Faussi el 2026-08-10
 | Fichero | Qué es | Dónde sale |
 |---|---|---|
 | `banner.webp` | Banner con el rótulo del juego y el pulpo mascota | La portada |
-| `captura-combate.webp` | Combate contra la oleada, «la guerra neón ha llegado» | Galería |
-| `captura-sombra.webp` | Selección de personaje: Sombra | Galería |
-| `captura-luz.webp` | Ficha del esbirro Luz | Galería |
+| `captura-menu.webp` | Menú principal, mapa 1 Bosque de Silicio | Galería |
+| `captura-anillos.webp` | Combate con anillos rúnicos en tormenta | Galería |
+| `captura-slimes.webp` | Combate contra la horda verde | Galería |
+
+> ⚠️ **Ninguna imagen puede llevar la marca de agua de Gemini.** Las tres capturas de
+> la galería se cambiaron el 2026-08-10 justo por eso: dos de las anteriores traían el
+> icono de IA en una esquina. Antes de subir una imagen nueva, mírale las cuatro
+> esquinas ampliadas. El banner está comprobado y limpio.
 
 `og-caos-total-neon.jpg` se genera a partir del banner y solo se usa al compartir el
 enlace. `icono.png` y `favicon.png` no se ven en la página: son el icono de la pestaña
