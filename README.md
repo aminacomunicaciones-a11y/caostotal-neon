@@ -1,7 +1,18 @@
 # Caos Total: Neon — web pública
 
-Página pública del juego **Caos Total: Neon** (Amina Estudio). Es la URL que va en
+Página pública del juego **Caos Total: Neon** (Amina). Es la URL que va en
 el campo **«Sitio web»** de la ficha de Google Play.
+
+> **Nombre del estudio:** el nombre público es **«Amina»**, a secas. En la web no queda
+> ni un «Amina Estudio». Ojo: el logo entregado (`Assets/Resources/Marca/AminaEstudio.png`)
+> *dibuja* «AMINA ESTUDIO», así que el pie usa un rótulo de texto en vez del PNG. Cuando
+> haya un logo redibujado solo con «AMINA», vuelve a ponerse como imagen.
+
+> **Nada de promesas falsas.** La web **no** puede decir «sin compras», «sin registro»,
+> «sin recopilar datos» ni «sin conexión»: el juego lleva compras dentro de la app
+> (packs de Astros, con Unity Purchasing) y va a tener cuentas con recopilación de datos.
+> Sí es cierto y sí se dice: descarga gratis y sin anuncios (no hay ningún SDK de
+> publicidad en el proyecto).
 
 **En vivo:** https://aminacomunicaciones-a11y.github.io/caostotal-neon/
 

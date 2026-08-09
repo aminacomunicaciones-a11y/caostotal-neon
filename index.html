@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Caos Total: Neon — survival arcade de oleadas para Android | Amina Estudio</title>
-<meta name="description" content="Caos Total: Neon es un survival arcade de oleadas con estética neón para Android: 17 armas, 20 fusiones y jefes nombrados. Sin anuncios, sin compras, sin internet y sin recopilar datos.">
+<title>Caos Total: Neon — survival arcade de oleadas para Android | Amina</title>
+<meta name="description" content="Caos Total: Neon es un survival arcade de oleadas con estética neón para Android: 17 armas, 20 fusiones únicas, más de 25 criaturas y jefes nombrados. Descarga gratis y sin anuncios.">
 <link rel="canonical" href="https://aminacomunicaciones-a11y.github.io/caostotal-neon/">
-<meta name="author" content="Amina Estudio">
+<meta name="author" content="Amina">
 <meta name="theme-color" content="#05070d">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/icono.png">
@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Caos Total: Neon">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Caos Total: Neon — survival arcade de oleadas">
-<meta property="og:description" content="Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos. Gratis en Android, sin anuncios ni compras.">
+<meta property="og:description" content="Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos. Descarga gratis en Android, sin anuncios.">
 <meta property="og:url" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/">
 <meta property="og:image" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg">
 <meta property="og:image:width" content="1200">
@@ -34,15 +34,15 @@
   "alternateName": "Caos Total Neon",
   "url": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/",
   "image": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg",
-  "description": "Survival arcade de oleadas con estética neón para Android. Fusiona 17 armas en 20 combinaciones únicas, enfréntate a jefes nombrados y progresa entre partidas. Sin anuncios, sin compras integradas, sin conexión y sin recopilación de datos.",
+  "description": "Survival arcade de oleadas con estética neón para Android. Fusiona 17 armas en 20 combinaciones únicas, enfréntate a jefes nombrados y progresa entre partidas. Descarga gratis y sin anuncios, con compras opcionales dentro del juego.",
   "inLanguage": "es",
   "genre": ["Arcade", "Acción", "Supervivencia", "Roguelite"],
   "gamePlatform": "Android",
   "operatingSystem": "Android",
   "applicationCategory": "GameApplication",
-  "author": { "@type": "Organization", "name": "Amina Estudio", "email": "amina.comunicaciones@gmail.com" },
-  "publisher": { "@type": "Organization", "name": "Amina Estudio", "email": "amina.comunicaciones@gmail.com" },
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder" }
+  "author": { "@type": "Organization", "name": "Amina", "email": "amina.comunicaciones@gmail.com" },
+  "publisher": { "@type": "Organization", "name": "Amina", "email": "amina.comunicaciones@gmail.com" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder", "description": "Descarga gratuita con compras opcionales dentro de la aplicación" }
 }
 </script>
 
@@ -171,14 +171,15 @@
   }
 
   /* ---------- CAPTURAS ---------- */
+  /* Cuadricula normal: todas las capturas a la vista, en filas y columnas.
+     Nada de carrusel ni desplazamiento lateral. */
   .galeria {
-    display: flex; gap: 1rem; overflow-x: auto; padding: .5rem .25rem 1.5rem;
-    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-    scrollbar-color: var(--lila) var(--papel);
+    display: grid; gap: 1.4rem 1rem; padding: .5rem 0 1rem;
+    grid-template-columns: repeat(2, 1fr);   /* movil */
   }
-  .galeria figure {
-    margin: 0; flex: none; width: 15rem; scroll-snap-align: center;
-  }
+  @media (min-width: 34rem) { .galeria { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 52rem) { .galeria { grid-template-columns: repeat(4, 1fr); } }
+  .galeria figure { margin: 0; }
   .galeria img {
     display: block; width: 100%; height: auto; border-radius: 14px;
     border: 1px solid var(--linea); background: #000;
@@ -187,21 +188,6 @@
   .galeria figcaption {
     margin-top: .65rem; font-size: .85rem; color: var(--suave); text-align: center;
   }
-  .pista { font-size: .85rem; color: var(--suave); margin: 0 0 1rem; }
-
-  /* ---------- PROMESAS ---------- */
-  .promesas { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); }
-  .promesa {
-    display: flex; align-items: center; gap: .7rem; padding: .9rem 1rem;
-    border: 1px solid var(--linea); border-radius: 11px; background: rgba(53, 224, 242, .045);
-    font-weight: 600; font-size: .95rem;
-  }
-  .promesa .tic {
-    flex: none; width: 22px; height: 22px; border-radius: 50%;
-    background: rgba(53, 224, 242, .16); color: var(--neon);
-    display: grid; place-items: center; font-size: .8rem; font-weight: 800;
-  }
-
   /* ---------- LLAMADA FINAL ---------- */
   .cierre {
     margin: 4.5rem 0 0; padding: 3rem 1.5rem; text-align: center;
@@ -224,15 +210,20 @@
     filter: blur(.5px); opacity: .7;
   }
   .pie-caja { display: flex; flex-wrap: wrap; gap: 1.75rem; justify-content: space-between; align-items: flex-start; }
-  .marca-estudio img { display: block; width: 160px; height: auto; margin-bottom: .6rem; }
+  .marca-estudio .rotulo {
+    margin: 0 0 .6rem; font-size: 1.75rem; font-weight: 800; letter-spacing: .06em;
+    background: linear-gradient(92deg, var(--neon) 10%, #cfefff 45%, var(--lila) 92%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 0 26px rgba(53, 224, 242, .22);
+  }
   footer h3 { margin: 0 0 .55rem; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta); }
   footer ul { list-style: none; margin: 0; padding: 0; }
   footer li { margin-bottom: .35rem; }
   .legalidad { margin-top: 2.25rem; padding-top: 1.4rem; border-top: 1px solid var(--linea); font-size: .85rem; }
 
   @media (max-width: 34rem) {
-    .galeria figure { width: 12.5rem; }
     .boton { width: 100%; justify-content: center; }
+    .galeria figcaption { font-size: .78rem; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -267,7 +258,8 @@
       </a>
       <a class="boton boton--fantasma" href="#capturas">Ver el juego</a>
     </div>
-    <p class="pie-boton">Gratis · Android · Al entrar en la prueba, el juego aparece en tu Google&nbsp;Play.</p>
+    <p class="pie-boton">Descarga gratis · Android · Con compras opcionales dentro del juego<br>
+      Al entrar en la prueba, el juego aparece en tu Google&nbsp;Play.</p>
 
     <div class="destacado">
       <img src="img/destacado.webp" width="1100" height="537" fetchpriority="high"
@@ -282,7 +274,7 @@
       <strong>Caos Total: Neon</strong> es un survival arcade de acción con estética neón:
       partidas rápidas, vista cenital y una horda de criaturas luminosas que no deja de crecer.
       Cada subida de nivel te hace más absurdo de poderoso, hasta que la pantalla entera
-      es tuya. Diseñado para jugar de pie, con una mano y sin conexión.
+      es tuya. Diseñado para jugar de pie y con una mano.
     </p>
 
     <div class="rejilla">
@@ -305,7 +297,7 @@
       <article class="tarjeta">
         <h3><span class="cifra">120</span>Hecho para tu móvil</h3>
         <p>Partidas de bolsillo a 60 o 120 FPS, controles de un pulgar y arranque inmediato.
-           Ocupa poco y funciona en modo avión.</p>
+           Ligero, para que quepa y corra en el móvil que ya tienes.</p>
       </article>
     </div>
   </section>
@@ -313,8 +305,7 @@
   <section id="capturas">
     <h2>Así se <span class="acento">ve</span></h2>
     <hr class="filo">
-    <p class="pista">Desliza para ver más capturas →</p>
-    <div class="galeria" tabindex="0" role="group" aria-label="Capturas del juego">
+    <div class="galeria">
       <figure>
         <img src="img/captura-01-horda-azul.webp" width="540" height="1200" loading="lazy"
              alt="La nave del jugador rodeada por un enjambre de criaturas azules brillantes.">
@@ -353,19 +344,31 @@
     </div>
   </section>
 
-  <section id="promesas">
-    <h2>Lo que <span class="acento">no</span> vas a encontrar</h2>
+  <section id="claridad">
+    <h2>Claro desde el <span class="acento">principio</span></h2>
     <hr class="filo">
     <p class="entradilla">
-      El juego se financia con nada: no hay tienda, ni vídeos que aguantar, ni cuenta que crear.
-      Tampoco sale a Internet — así que no hay ningún dato tuyo que recopilar.
+      Preferimos contarte aquí cómo funciona el juego antes de que te lo encuentres dentro.
     </p>
-    <div class="promesas">
-      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin anuncios</p>
-      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin compras</p>
-      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin conexión</p>
-      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin registro</p>
-      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin recopilar datos</p>
+    <div class="rejilla">
+      <article class="tarjeta">
+        <h3>Gratis y sin anuncios</h3>
+        <p>El juego se descarga gratis y no lleva publicidad: ni banners, ni vídeos que aguantar
+           para seguir jugando. Ninguna partida se corta por en medio.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Compras opcionales dentro del juego</h3>
+        <p>Los Astros, la moneda rara, se ganan jugando: cayendo jefes y completando logros.
+           Si prefieres ir más rápido, dentro del juego puedes comprar packs de Astros. Es un
+           atajo, no un peaje.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Tus datos</h3>
+        <p>El juego sigue creciendo y habrá cuentas para guardar tu progreso. Qué datos se
+           tratan, para qué y durante cuánto tiempo está siempre —y actualizado— en la
+           <a href="https://aminacomunicaciones-a11y.github.io/caostotal-legal/privacidad.html">política
+           de privacidad</a>.</p>
+      </article>
     </div>
   </section>
 
@@ -389,9 +392,14 @@
   <div class="hoja">
     <div class="pie-caja">
       <div class="marca-estudio">
-        <img src="img/amina-estudio.png" width="160" height="61"
-             alt="Amina Estudio">
-        <p style="margin:0; max-width: 20rem;">Estudio independiente. Hacemos juegos que respetan tu batería, tu tiempo y tus datos.</p>
+        <!-- Rotulo en texto, no el PNG de marca: el logo entregado dibuja
+             "AMINA ESTUDIO" y el nombre publico ahora es solo "Amina". Cuando
+             haya un logo redibujado, vuelve aqui una <img>. -->
+        <p class="rotulo">Amina</p>
+        <!-- Ojo: nada de empezar esta frase con "Estudio". El rotulo de arriba
+             pone "Amina" y las dos lineas juntas se leerian "Amina Estudio",
+             que es justo el nombre que se ha retirado. -->
+        <p style="margin:0; max-width: 20rem;">Hacemos juegos independientes que respetan tu batería y tu tiempo.</p>
       </div>
 
       <div>
@@ -412,7 +420,7 @@
     </div>
 
     <p class="legalidad">
-      © 2026 Amina Estudio · Caos Total: Neon. Google Play y el logotipo de Google Play son
+      © 2026 Amina · Caos Total: Neon. Google Play y el logotipo de Google Play son
       marcas registradas de Google LLC.
     </p>
   </div>
