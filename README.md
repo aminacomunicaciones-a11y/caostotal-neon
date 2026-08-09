@@ -31,6 +31,21 @@ https://play.google.com/store/apps/details?id=com.caostotalgames.caostotal
 Y ajusta el texto del sello («Prueba cerrada abierta en Google Play») y de la
 sección de cierre.
 
+## Pendiente: dominio propio (NO comprado)
+
+Faussi valoró un dominio tipo `caostotalneon.com`. **No se ha comprado nada** — queda
+como decisión suya, porque implica un gasto recurrente y todavía no está dado de alta
+como autónomo.
+
+Coste orientativo: **10–15 €/año** el `.com` en un registrador estándar
+(Namecheap, Porkbun, Cloudflare Registrar), con privacidad de WHOIS incluida. Los
+`.com` suelen tener el primer año más barato y renovar algo más caro; conviene mirar
+el precio de **renovación**, no el de alta.
+
+Si algún día se compra, GitHub Pages lo admite gratis: se añade un fichero `CNAME`
+con el dominio, se apuntan los DNS a GitHub y la web sigue siendo la misma. La URL
+actual de `github.io` seguiría funcionando como redirección.
+
 ## Publicar un cambio
 
 GitHub Pages sirve la rama `main`. Cualquier `git push` a `main` republica la web
