@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caos Total: Neon — survival arcade de oleadas para Android | Amina Estudio</title>
+<meta name="description" content="Caos Total: Neon es un survival arcade de oleadas con estética neón para Android: 17 armas, 20 fusiones y jefes nombrados. Sin anuncios, sin compras, sin internet y sin recopilar datos.">
+<link rel="canonical" href="https://aminacomunicaciones-a11y.github.io/caostotal-neon/">
+<meta name="author" content="Amina Estudio">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/icono.png">
+
+<!-- Tarjeta al compartir el enlace (WhatsApp, X, Discord, Google) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caos Total: Neon">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Caos Total: Neon — survival arcade de oleadas">
+<meta property="og:description" content="Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos. Gratis en Android, sin anuncios ni compras.">
+<meta property="og:url" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/">
+<meta property="og:image" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Partida de Caos Total: Neon: una horda de criaturas luminosas rodea a la nave del jugador.">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Datos estructurados: le dicen a Google que esto es la ficha de un
+     videojuego, no un blog. Es lo que habilita el resultado enriquecido. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Caos Total: Neon",
+  "alternateName": "Caos Total Neon",
+  "url": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/",
+  "image": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg",
+  "description": "Survival arcade de oleadas con estética neón para Android. Fusiona 17 armas en 20 combinaciones únicas, enfréntate a jefes nombrados y progresa entre partidas. Sin anuncios, sin compras integradas, sin conexión y sin recopilación de datos.",
+  "inLanguage": "es",
+  "genre": ["Arcade", "Acción", "Supervivencia", "Roguelite"],
+  "gamePlatform": "Android",
+  "operatingSystem": "Android",
+  "applicationCategory": "GameApplication",
+  "author": { "@type": "Organization", "name": "Amina Estudio", "email": "amina.comunicaciones@gmail.com" },
+  "publisher": { "@type": "Organization", "name": "Amina Estudio", "email": "amina.comunicaciones@gmail.com" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder" }
+}
+</script>
+
+<style>
+  /* Caos Total: Neon — pagina publica del juego.
+     Hereda los mismos tokens de marca que la pagina legal (privacidad.html)
+     para que las dos se lean como el mismo estudio. Autonoma a proposito:
+     cero fuentes, scripts o CDN externos; solo imagenes propias del juego. */
+  :root {
+    --fondo: #05070d; --papel: #0d1220; --papel2: #101828;
+    --tinta: #dbe4f0; --suave: #8fa0b8; --linea: rgba(53, 224, 242, .18);
+    --neon: #35e0f2; --lila: #b45cff; --oro: #ffd76a;
+    --ancho: 62rem;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(60rem 30rem at 85% -5%, rgba(180, 92, 255, .12), transparent 60%),
+      radial-gradient(70rem 34rem at 10% 0%, rgba(53, 224, 242, .13), transparent 55%),
+      var(--fondo);
+    color: var(--tinta);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+  /* La reticula de circuito del juego, en CSS puro y casi subliminal. */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 47px, rgba(53, 224, 242, .04) 47px 48px),
+      repeating-linear-gradient(90deg, transparent 0 47px, rgba(53, 224, 242, .04) 47px 48px);
+  }
+  .hoja { max-width: var(--ancho); margin: 0 auto; padding: 0 1.25rem; }
+  a { color: var(--neon); }
+  :focus-visible { outline: 2px solid var(--neon); outline-offset: 3px; border-radius: 4px; }
+
+  /* ---------- PORTADA ---------- */
+  .portada { padding: 3.5rem 0 1rem; text-align: center; position: relative; }
+  .icono {
+    width: 108px; height: 108px; border-radius: 24px; display: block; margin: 0 auto 1.5rem;
+    border: 1px solid var(--linea);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.6), 0 12px 44px rgba(53, 224, 242, .22);
+  }
+  h1 {
+    margin: 0 0 .5rem; font-size: clamp(2.3rem, 8vw, 4rem); line-height: 1.05;
+    letter-spacing: -.02em; font-weight: 800;
+    background: linear-gradient(92deg, var(--neon) 8%, #cfefff 42%, var(--lila) 92%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 0 38px rgba(53, 224, 242, .25);
+  }
+  .lema {
+    margin: 0 auto 1.1rem; max-width: 34rem; font-size: clamp(1.05rem, 3.4vw, 1.3rem);
+    color: var(--tinta);
+  }
+  .sello {
+    display: inline-flex; align-items: center; gap: .5rem; margin-bottom: 1.6rem;
+    padding: .3rem .85rem; border: 1px solid var(--linea); border-radius: 999px;
+    background: rgba(53, 224, 242, .06);
+    font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--suave);
+  }
+  .sello::before {
+    content: ""; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--oro); box-shadow: 0 0 10px var(--oro);
+  }
+
+  /* ---------- BOTONES ---------- */
+  .botones { display: flex; flex-wrap: wrap; gap: .85rem; justify-content: center; }
+  .boton {
+    display: inline-flex; align-items: center; gap: .6rem;
+    padding: .95rem 1.6rem; border-radius: 12px; text-decoration: none;
+    font-weight: 700; font-size: 1.02rem; border: 1px solid transparent;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .boton svg { flex: none; }
+  .boton--principal {
+    background: linear-gradient(96deg, var(--neon), #7ad9ff 55%, var(--lila));
+    color: #04121a; box-shadow: 0 8px 34px rgba(53, 224, 242, .3);
+  }
+  .boton--principal:hover { transform: translateY(-2px); box-shadow: 0 12px 42px rgba(53, 224, 242, .45); }
+  .boton--fantasma {
+    border-color: var(--linea); color: var(--tinta); background: rgba(255,255,255,.03);
+  }
+  .boton--fantasma:hover { background: rgba(53, 224, 242, .1); transform: translateY(-2px); }
+  .pie-boton { margin: .95rem 0 0; font-size: .88rem; color: var(--suave); }
+
+  /* ---------- IMAGEN DESTACADA ---------- */
+  .destacado {
+    margin: 2.75rem auto 0; max-width: 55rem; position: relative;
+    border-radius: 16px; overflow: hidden; border: 1px solid var(--linea);
+    box-shadow: 0 24px 70px rgba(0,0,0,.7), 0 0 60px rgba(180, 92, 255, .12);
+  }
+  .destacado img { display: block; width: 100%; height: auto; }
+
+  /* ---------- SECCIONES ---------- */
+  section { padding: 4rem 0 1rem; }
+  h2 {
+    font-size: clamp(1.5rem, 4.5vw, 2rem); margin: 0 0 .4rem; letter-spacing: -.01em;
+    color: #eaf3ff;
+  }
+  h2 .acento { color: var(--neon); }
+  .entradilla { margin: 0 0 2rem; color: var(--suave); max-width: 40rem; }
+  .filo {
+    height: 3px; border: 0; margin: 0 0 2.2rem; max-width: 8rem;
+    background: linear-gradient(90deg, var(--neon), var(--lila));
+    filter: blur(.4px); border-radius: 3px;
+  }
+
+  /* ---------- TARJETAS ---------- */
+  .rejilla { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .tarjeta {
+    background: linear-gradient(180deg, var(--papel2), var(--papel));
+    border: 1px solid var(--linea); border-radius: 14px; padding: 1.4rem;
+    position: relative; overflow: hidden;
+  }
+  .tarjeta::after {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--neon), var(--lila)); opacity: .55;
+  }
+  .tarjeta h3 { margin: 0 0 .5rem; font-size: 1.06rem; color: #eaf3ff; letter-spacing: .01em; }
+  .tarjeta p { margin: 0; color: var(--suave); font-size: .95rem; }
+  .cifra {
+    display: block; font-size: 1.9rem; font-weight: 800; line-height: 1; margin-bottom: .55rem;
+    color: var(--neon); text-shadow: 0 0 22px rgba(53, 224, 242, .45);
+  }
+
+  /* ---------- CAPTURAS ---------- */
+  .galeria {
+    display: flex; gap: 1rem; overflow-x: auto; padding: .5rem .25rem 1.5rem;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    scrollbar-color: var(--lila) var(--papel);
+  }
+  .galeria figure {
+    margin: 0; flex: none; width: 15rem; scroll-snap-align: center;
+  }
+  .galeria img {
+    display: block; width: 100%; height: auto; border-radius: 14px;
+    border: 1px solid var(--linea); background: #000;
+    box-shadow: 0 14px 40px rgba(0,0,0,.65);
+  }
+  .galeria figcaption {
+    margin-top: .65rem; font-size: .85rem; color: var(--suave); text-align: center;
+  }
+  .pista { font-size: .85rem; color: var(--suave); margin: 0 0 1rem; }
+
+  /* ---------- PROMESAS ---------- */
+  .promesas { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); }
+  .promesa {
+    display: flex; align-items: center; gap: .7rem; padding: .9rem 1rem;
+    border: 1px solid var(--linea); border-radius: 11px; background: rgba(53, 224, 242, .045);
+    font-weight: 600; font-size: .95rem;
+  }
+  .promesa .tic {
+    flex: none; width: 22px; height: 22px; border-radius: 50%;
+    background: rgba(53, 224, 242, .16); color: var(--neon);
+    display: grid; place-items: center; font-size: .8rem; font-weight: 800;
+  }
+
+  /* ---------- LLAMADA FINAL ---------- */
+  .cierre {
+    margin: 4.5rem 0 0; padding: 3rem 1.5rem; text-align: center;
+    border: 1px solid var(--linea); border-radius: 18px;
+    background:
+      radial-gradient(40rem 16rem at 50% 0%, rgba(180, 92, 255, .16), transparent 70%),
+      linear-gradient(180deg, var(--papel2), var(--papel));
+  }
+  .cierre h2 { margin-bottom: .75rem; }
+  .cierre p { color: var(--suave); max-width: 32rem; margin: 0 auto 1.8rem; }
+
+  /* ---------- PIE ---------- */
+  footer {
+    margin-top: 4.5rem; padding: 2.5rem 0 3.5rem; border-top: 1px solid var(--linea);
+    position: relative; color: var(--suave); font-size: .92rem;
+  }
+  footer::before {
+    content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--neon) 18%, var(--lila) 82%, transparent);
+    filter: blur(.5px); opacity: .7;
+  }
+  .pie-caja { display: flex; flex-wrap: wrap; gap: 1.75rem; justify-content: space-between; align-items: flex-start; }
+  .marca-estudio img { display: block; width: 160px; height: auto; margin-bottom: .6rem; }
+  footer h3 { margin: 0 0 .55rem; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta); }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { margin-bottom: .35rem; }
+  .legalidad { margin-top: 2.25rem; padding-top: 1.4rem; border-top: 1px solid var(--linea); font-size: .85rem; }
+
+  @media (max-width: 34rem) {
+    .galeria figure { width: 12.5rem; }
+    .boton { width: 100%; justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<main class="hoja">
+
+  <header class="portada">
+    <img class="icono" src="img/icono.png" width="108" height="108"
+         alt="Icono de Caos Total: Neon: las letras CT en cian sobre una rejilla oscura.">
+    <h1>Caos Total: Neon</h1>
+    <p class="lema">Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos.</p>
+    <p class="sello">Prueba cerrada abierta en Google Play</p>
+
+    <div class="botones">
+      <!-- ENLACE DE DESCARGA. Hoy apunta al alta de la prueba cerrada, que es
+           lo unico que responde mientras el juego no sea publico (la ficha
+           /store/apps/details da 404 hasta la publicacion).
+           CUANDO EL JUEGO SALGA EN ABIERTO, cambiar este href por:
+           https://play.google.com/store/apps/details?id=com.caostotalgames.caostotal -->
+      <a class="boton boton--principal"
+         href="https://play.google.com/apps/testing/com.caostotalgames.caostotal"
+         rel="noopener">
+        <svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M1.3.4A1.7 1.7 0 0 0 .6 1.8v18.4c0 .6.3 1.1.7 1.4l10-10.6L1.3.4Zm11.2 10.2 2.9-3.1 3.4 2c.9.5.9 1.9 0 2.4l-3.4 2-2.9-3.3ZM2.4 21.9l9.3-9.9 2.6 3-11 6.5c-.3.2-.6.3-.9.4Zm0-21.8c.3 0 .6.2.9.3l11 6.5-2.6 3L2.4.1Z"/>
+        </svg>
+        Apuntarme y jugar en Android
+      </a>
+      <a class="boton boton--fantasma" href="#capturas">Ver el juego</a>
+    </div>
+    <p class="pie-boton">Gratis · Android · Al entrar en la prueba, el juego aparece en tu Google&nbsp;Play.</p>
+
+    <div class="destacado">
+      <img src="img/destacado.webp" width="1100" height="537" fetchpriority="high"
+           alt="Partida en curso: un rayo de energía atraviesa una arena de circuitos llena de criaturas neón.">
+    </div>
+  </header>
+
+  <section id="juego">
+    <h2>Tú solo contra <span class="acento">oleadas infinitas</span></h2>
+    <hr class="filo">
+    <p class="entradilla">
+      <strong>Caos Total: Neon</strong> es un survival arcade de acción con estética neón:
+      partidas rápidas, vista cenital y una horda de criaturas luminosas que no deja de crecer.
+      Cada subida de nivel te hace más absurdo de poderoso, hasta que la pantalla entera
+      es tuya. Diseñado para jugar de pie, con una mano y sin conexión.
+    </p>
+
+    <div class="rejilla">
+      <article class="tarjeta">
+        <h3><span class="cifra">20</span>Fusiona tu arsenal</h3>
+        <p>17 armas neón con escalones de mejora, evoluciones con mecánica propia y 20 fusiones
+           únicas: la Singularidad Devoradora que engulle media pantalla, la Plaga de Neón que
+           salta sola de cuerpo en cuerpo, el Faro de Aniquilación que barre 360°.</p>
+      </article>
+      <article class="tarjeta">
+        <h3><span class="cifra">25+</span>Una fauna que brilla (y muerde)</h3>
+        <p>Más de 25 criaturas gelatinosas con luz propia, élites con apellido, mini-jefes y
+           jefes nombrados con su propia música de combate.</p>
+      </article>
+      <article class="tarjeta">
+        <h3><span class="cifra">∞</span>Progresa entre partidas</h3>
+        <p>Árbol permanente del personaje, logros con recompensa, misiones, bestiario
+           coleccionable y fondos desbloqueables con su propia banda sonora.</p>
+      </article>
+      <article class="tarjeta">
+        <h3><span class="cifra">120</span>Hecho para tu móvil</h3>
+        <p>Partidas de bolsillo a 60 o 120 FPS, controles de un pulgar y arranque inmediato.
+           Ocupa poco y funciona en modo avión.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="capturas">
+    <h2>Así se <span class="acento">ve</span></h2>
+    <hr class="filo">
+    <p class="pista">Desliza para ver más capturas →</p>
+    <div class="galeria" tabindex="0" role="group" aria-label="Capturas del juego">
+      <figure>
+        <img src="img/captura-01-horda-azul.webp" width="540" height="1200" loading="lazy"
+             alt="La nave del jugador rodeada por un enjambre de criaturas azules brillantes.">
+        <figcaption>La horda se cierra</figcaption>
+      </figure>
+      <figure>
+        <img src="img/captura-02-horda-roja.webp" width="540" height="1200" loading="lazy"
+             alt="Decenas de enemigos rojos cubren la pantalla mientras el jugador dispara.">
+        <figcaption>Oleada densa</figcaption>
+      </figure>
+      <figure>
+        <img src="img/captura-03-faro.webp" width="540" height="1200" loading="lazy"
+             alt="El Faro de Aniquilación dispara un haz de luz que cruza toda la arena.">
+        <figcaption>Faro de Aniquilación</figcaption>
+      </figure>
+      <figure>
+        <img src="img/captura-04-singularidad.webp" width="540" height="1200" loading="lazy"
+             alt="La Singularidad Devoradora absorbe a los enemigos hacia un vórtice central.">
+        <figcaption>Singularidad Devoradora</figcaption>
+      </figure>
+      <figure>
+        <img src="img/captura-05-emperatriz.webp" width="540" height="1200" loading="lazy"
+             alt="Combate contra la jefa Emperatriz Medusa, de gran tamaño y con luz propia.">
+        <figcaption>Jefa: Emperatriz Medusa</figcaption>
+      </figure>
+      <figure>
+        <img src="img/captura-06-codex.webp" width="540" height="1200" loading="lazy"
+             alt="Pantalla de códex con las fichas de los héroes desbloqueables.">
+        <figcaption>Códex de héroes</figcaption>
+      </figure>
+      <figure>
+        <img src="img/captura-07-arbol.webp" width="540" height="1200" loading="lazy"
+             alt="Panel de mejoras permanentes con niveles de vitalidad, empuje, coraza y más.">
+        <figcaption>Mejoras permanentes</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="promesas">
+    <h2>Lo que <span class="acento">no</span> vas a encontrar</h2>
+    <hr class="filo">
+    <p class="entradilla">
+      El juego se financia con nada: no hay tienda, ni vídeos que aguantar, ni cuenta que crear.
+      Tampoco sale a Internet — así que no hay ningún dato tuyo que recopilar.
+    </p>
+    <div class="promesas">
+      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin anuncios</p>
+      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin compras</p>
+      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin conexión</p>
+      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin registro</p>
+      <p class="promesa"><span class="tic" aria-hidden="true">✓</span> Sin recopilar datos</p>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <h2>Entra en la prueba cerrada</h2>
+    <p>
+      Caos Total: Neon está en fase de prueba cerrada en Google Play. Apúntate desde el
+      enlace y el juego te aparecerá para descargar en tu cuenta.
+    </p>
+    <div class="botones">
+      <a class="boton boton--principal"
+         href="https://play.google.com/apps/testing/com.caostotalgames.caostotal"
+         rel="noopener">Apuntarme en Google Play</a>
+      <a class="boton boton--fantasma" href="mailto:amina.comunicaciones@gmail.com">Escribir al estudio</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="hoja">
+    <div class="pie-caja">
+      <div class="marca-estudio">
+        <img src="img/amina-estudio.png" width="160" height="61"
+             alt="Amina Estudio">
+        <p style="margin:0; max-width: 20rem;">Estudio independiente. Hacemos juegos que respetan tu batería, tu tiempo y tus datos.</p>
+      </div>
+
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="mailto:amina.comunicaciones@gmail.com">amina.comunicaciones@gmail.com</a></li>
+          <li>Prensa, soporte y dudas del juego</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>El juego</h3>
+        <ul>
+          <li><a href="https://play.google.com/apps/testing/com.caostotalgames.caostotal" rel="noopener">Prueba cerrada en Google Play</a></li>
+          <li><a href="https://aminacomunicaciones-a11y.github.io/caostotal-legal/privacidad.html">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="legalidad">
+      © 2026 Amina Estudio · Caos Total: Neon. Google Play y el logotipo de Google Play son
+      marcas registradas de Google LLC.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
