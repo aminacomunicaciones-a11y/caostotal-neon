@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Partida de Caos Total: Neon: una horda de criaturas luminosas rodea a la nave del jugador.">
+<meta property="og:image:alt" content="Banner de Caos Total: Neon: el título en neón junto a la mascota del juego, un pulpo neón coronado de ojos dorados.">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Datos estructurados: le dicen a Google que esto es la ficha de un
@@ -82,18 +82,18 @@
   :focus-visible { outline: 2px solid var(--neon); outline-offset: 3px; border-radius: 4px; }
 
   /* ---------- PORTADA ---------- */
-  .portada { padding: 3.5rem 0 1rem; text-align: center; position: relative; }
-  .icono {
-    width: 108px; height: 108px; border-radius: 24px; display: block; margin: 0 auto 1.5rem;
-    border: 1px solid var(--linea);
-    box-shadow: 0 0 0 1px rgba(0,0,0,.6), 0 12px 44px rgba(53, 224, 242, .22);
+  .portada { padding: 2.5rem 0 1rem; text-align: center; position: relative; }
+  /* EL BANNER es la portada: ya trae el rotulo del juego y la mascota. */
+  .banner {
+    max-width: 46rem; margin: 0 auto 1.75rem;
+    border-radius: 16px; overflow: hidden; border: 1px solid var(--linea);
+    box-shadow: 0 24px 70px rgba(0,0,0,.7), 0 0 60px rgba(180, 92, 255, .14);
   }
-  h1 {
-    margin: 0 0 .5rem; font-size: clamp(2.3rem, 8vw, 4rem); line-height: 1.05;
-    letter-spacing: -.02em; font-weight: 800;
-    background: linear-gradient(92deg, var(--neon) 8%, #cfefff 42%, var(--lila) 92%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    text-shadow: 0 0 38px rgba(53, 224, 242, .25);
+  .banner img { display: block; width: 100%; height: auto; }
+  /* Oculto a la vista, visible para Google y los lectores de pantalla. */
+  .oculto-visual {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
   }
   .lema {
     margin: 0 auto 1.1rem; max-width: 34rem; font-size: clamp(1.05rem, 3.4vw, 1.3rem);
@@ -130,14 +130,6 @@
   .boton--fantasma:hover { background: rgba(53, 224, 242, .1); transform: translateY(-2px); }
   .pie-boton { margin: .95rem 0 0; font-size: .88rem; color: var(--suave); }
 
-  /* ---------- IMAGEN DESTACADA ---------- */
-  .destacado {
-    margin: 2.75rem auto 0; max-width: 55rem; position: relative;
-    border-radius: 16px; overflow: hidden; border: 1px solid var(--linea);
-    box-shadow: 0 24px 70px rgba(0,0,0,.7), 0 0 60px rgba(180, 92, 255, .12);
-  }
-  .destacado img { display: block; width: 100%; height: auto; }
-
   /* ---------- SECCIONES ---------- */
   section { padding: 4rem 0 1rem; }
   h2 {
@@ -173,12 +165,13 @@
   /* ---------- CAPTURAS ---------- */
   /* Cuadricula normal: todas las capturas a la vista, en filas y columnas.
      Nada de carrusel ni desplazamiento lateral. */
+  /* Tres capturas de proporciones distintas (dos verticales y una mas ancha):
+     se alinean por arriba y cada una conserva su forma, sin recortar interfaz. */
   .galeria {
-    display: grid; gap: 1.4rem 1rem; padding: .5rem 0 1rem;
-    grid-template-columns: repeat(2, 1fr);   /* movil */
+    display: grid; gap: 1.75rem 1.25rem; padding: .5rem 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    align-items: start;
   }
-  @media (min-width: 34rem) { .galeria { grid-template-columns: repeat(3, 1fr); } }
-  @media (min-width: 52rem) { .galeria { grid-template-columns: repeat(4, 1fr); } }
   .galeria figure { margin: 0; }
   .galeria img {
     display: block; width: 100%; height: auto; border-radius: 14px;
@@ -236,9 +229,14 @@
 <main class="hoja">
 
   <header class="portada">
-    <img class="icono" src="img/icono.png" width="108" height="108"
-         alt="Icono de Caos Total: Neon: las letras CT en cian sobre una rejilla oscura.">
-    <h1>Caos Total: Neon</h1>
+    <!-- El banner YA dibuja el nombre del juego, asi que el <h1> va oculto a la
+         vista pero presente para Google y los lectores de pantalla. Si la
+         imagen no carga, el alt dice lo mismo. -->
+    <div class="banner">
+      <img src="img/banner.webp" width="1024" height="500" fetchpriority="high"
+           alt="Caos Total: Neon — survival arcade neón de oleadas infinitas. Junto al título, la mascota del juego: un pulpo neón coronado, de ojos dorados.">
+    </div>
+    <h1 class="oculto-visual">Caos Total: Neon</h1>
     <p class="lema">Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos.</p>
     <p class="sello">Prueba cerrada abierta en Google Play</p>
 
@@ -261,10 +259,6 @@
     <p class="pie-boton">Descarga gratis · Android · Con compras opcionales dentro del juego<br>
       Al entrar en la prueba, el juego aparece en tu Google&nbsp;Play.</p>
 
-    <div class="destacado">
-      <img src="img/destacado.webp" width="1100" height="537" fetchpriority="high"
-           alt="Partida en curso: un rayo de energía atraviesa una arena de circuitos llena de criaturas neón.">
-    </div>
   </header>
 
   <section id="juego">
@@ -307,39 +301,19 @@
     <hr class="filo">
     <div class="galeria">
       <figure>
-        <img src="img/captura-01-horda-azul.webp" width="540" height="1200" loading="lazy"
-             alt="La nave del jugador rodeada por un enjambre de criaturas azules brillantes.">
-        <figcaption>La horda se cierra</figcaption>
+        <img src="img/captura-combate.webp" width="600" height="1341" loading="lazy"
+             alt="Partida en curso: el jugador dispara haces verdes contra una horda de criaturas gelatinosas verdes y moradas, entre cristales azules. Un cartel anuncia: la guerra neón ha llegado.">
+        <figcaption>La guerra neón ha llegado</figcaption>
       </figure>
       <figure>
-        <img src="img/captura-02-horda-roja.webp" width="540" height="1200" loading="lazy"
-             alt="Decenas de enemigos rojos cubren la pantalla mientras el jugador dispara.">
-        <figcaption>Oleada densa</figcaption>
+        <img src="img/captura-sombra.webp" width="600" height="1342" loading="lazy"
+             alt="Pantalla de selección de personaje: Sombra, de rol sigilo, con el arma Eco del Vacío, la pasiva Esquiva y sus barras de vida, empuje, velocidad y recarga.">
+        <figcaption>Elige personaje: Sombra</figcaption>
       </figure>
       <figure>
-        <img src="img/captura-03-faro.webp" width="540" height="1200" loading="lazy"
-             alt="El Faro de Aniquilación dispara un haz de luz que cruza toda la arena.">
-        <figcaption>Faro de Aniquilación</figcaption>
-      </figure>
-      <figure>
-        <img src="img/captura-04-singularidad.webp" width="540" height="1200" loading="lazy"
-             alt="La Singularidad Devoradora absorbe a los enemigos hacia un vórtice central.">
-        <figcaption>Singularidad Devoradora</figcaption>
-      </figure>
-      <figure>
-        <img src="img/captura-05-emperatriz.webp" width="540" height="1200" loading="lazy"
-             alt="Combate contra la jefa Emperatriz Medusa, de gran tamaño y con luz propia.">
-        <figcaption>Jefa: Emperatriz Medusa</figcaption>
-      </figure>
-      <figure>
-        <img src="img/captura-06-codex.webp" width="540" height="1200" loading="lazy"
-             alt="Pantalla de códex con las fichas de los héroes desbloqueables.">
-        <figcaption>Códex de héroes</figcaption>
-      </figure>
-      <figure>
-        <img src="img/captura-07-arbol.webp" width="540" height="1200" loading="lazy"
-             alt="Panel de mejoras permanentes con niveles de vitalidad, empuje, coraza y más.">
-        <figcaption>Mejoras permanentes</figcaption>
+        <img src="img/captura-luz.webp" width="700" height="993" loading="lazy"
+             alt="Ficha del esbirro Luz, un cristal alado con aureola: castiga las filas alineadas, ataca con un haz perforante cada dos segundos y remata con Supernova.">
+        <figcaption>Esbirros que te acompañan: Luz</figcaption>
       </figure>
     </div>
   </section>

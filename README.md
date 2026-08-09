@@ -70,7 +70,25 @@ git push
 
 ## Las imágenes
 
-Salen del proyecto de Unity (`Preview/StoreShots`, `Preview/Ficha`,
-`Assets/Resources/Marca`) y se reducen a WebP con el guion que las generó
-(11,8 MB → 286 KB). Si se cambian las capturas de la ficha, conviene volver a
-pasarlas por el mismo redimensionado (540 px de ancho, WebP calidad 80).
+La web lleva **exactamente 4 imágenes**, las que entregó Faussi el 2026-08-10
+(5,8 MB de PNG → 212 KB de WebP):
+
+| Fichero | Qué es | Dónde sale |
+|---|---|---|
+| `banner.webp` | Banner con el rótulo del juego y el pulpo mascota | La portada |
+| `captura-combate.webp` | Combate contra la oleada, «la guerra neón ha llegado» | Galería |
+| `captura-sombra.webp` | Selección de personaje: Sombra | Galería |
+| `captura-luz.webp` | Ficha del esbirro Luz | Galería |
+
+`og-caos-total-neon.jpg` se genera a partir del banner y solo se usa al compartir el
+enlace. `icono.png` y `favicon.png` no se ven en la página: son el icono de la pestaña
+y el de la pantalla de inicio.
+
+Como el banner ya dibuja el nombre del juego, el `<h1>` va con la clase
+`.oculto-visual`: sigue estando para Google y los lectores de pantalla, pero no se
+repite en pantalla. **Si algún día se quita el banner, hay que volver a hacer visible
+ese `<h1>`.**
+
+Para añadir capturas nuevas: WebP calidad 82, 600 px de ancho las verticales y unos
+700 px las más apaisadas. No se recortan: las pantallas de menú llevan texto de
+interfaz y recortarlas se come información.
