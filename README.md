@@ -1,12 +1,19 @@
 # Caos Total: Neon — web pública
 
-Página pública del juego **Caos Total: Neon** (Amina). Es la URL que va en
+Página pública del juego **Caos Total: Neon**, de **Amina Juegos**. Es la URL que va en
 el campo **«Sitio web»** de la ficha de Google Play.
 
-> **Nombre del estudio:** el nombre público es **«Amina»**, a secas. En la web no queda
-> ni un «Amina Estudio». Ojo: el logo entregado (`Assets/Resources/Marca/AminaEstudio.png`)
-> *dibuja* «AMINA ESTUDIO», así que el pie usa un rótulo de texto en vez del PNG. Cuando
-> haya un logo redibujado solo con «AMINA», vuelve a ponerse como imagen.
+> **Nombre de la marca:** desde el 2026-08-10 el nombre público es **«Amina Juegos»**
+> (antes «Amina», y antes de eso «Amina Estudio»). Va en el `<title>`, en las meta, en
+> los datos estructurados, en la portada y en el pie.
+>
+> Dos reglas al escribir el pie: **la palabra «estudio» no puede aparecer en pantalla**
+> (Faussi no es un estudio), y la frase que va debajo del rótulo **no puede empezar por
+> «Juegos»**, porque pegada al rótulo se leería «Amina Juegos Juegos».
+>
+> Ojo: el logo entregado (`Assets/Resources/Marca/AminaEstudio.png`) *dibuja* «AMINA
+> ESTUDIO», así que el pie usa un rótulo de texto en vez del PNG. Cuando haya un logo
+> redibujado con «AMINA JUEGOS», vuelve a ponerse como imagen.
 
 > **Nada de promesas falsas.** La web **no** puede decir «sin compras», «sin registro»,
 > «sin recopilar datos» ni «sin conexión»: el juego lleva compras dentro de la app

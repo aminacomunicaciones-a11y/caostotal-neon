@@ -1,3 +1,12 @@
+# OJO: los rastreadores solo leen el robots.txt de la RAIZ del dominio, o sea
+# https://aminacomunicaciones-a11y.github.io/robots.txt — que hoy da 404 (no
+# existe repo de sitio raiz). Este fichero, al vivir en una subcarpeta, NO lo
+# lee Google: no bloquea nada, pero su linea Sitemap tampoco cuenta.
+#
+# Se deja porque (a) no estorba, (b) pasa a ser el bueno el dia que la web
+# tenga dominio propio, y (c) documenta cual es el sitemap.
+# Mientras tanto, el sitemap hay que darlo de alta a mano en Google Search
+# Console: el aviso por URL que existia antes lo retiro Google.
 User-agent: *
 Allow: /
 
