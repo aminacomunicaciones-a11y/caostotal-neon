@@ -1,19 +1,26 @@
 # Caos Total: Neon — web pública
 
-Página pública del juego **Caos Total: Neon**, de **Amina Juegos**. Es la URL que va en
+Página pública del juego **Caos Total: Neon**, de **Aminan Juegos**. Es la URL que va en
 el campo **«Sitio web»** de la ficha de Google Play.
 
-> **Nombre de la marca:** desde el 2026-08-10 el nombre público es **«Amina Juegos»**
-> (antes «Amina», y antes de eso «Amina Estudio»). Va en el `<title>`, en las meta, en
-> los datos estructurados, en la portada y en el pie.
+> **Nombre de la marca: «Aminan Juegos», con N al final de Aminan.** Corregido el
+> 2026-08-18. Las grafías sin la N (*Amin&#97;*, *Amin&#97; Juegos*, *Amin&#97; Estudio*) son
+> **incorrectas** y no deben volver a aparecer. El nombre va en el `<title>`, en las
+> meta, en los datos estructurados, en la portada y en el pie.
+>
+> ⚠️ **Dos cadenas que llevan la grafía vieja y NO se pueden tocar**, porque son
+> direcciones reales y romperlas rompe la web:
+> el correo `amina.comunicaciones@gmail.com` y el dominio
+> `aminacomunicaciones-a11y.github.io`.
 >
 > Dos reglas al escribir el pie: **la palabra «estudio» no puede aparecer en pantalla**
 > (Faussi no es un estudio), y la frase que va debajo del rótulo **no puede empezar por
-> «Juegos»**, porque pegada al rótulo se leería «Amina Juegos Juegos».
+> «Juegos»**, porque pegada al rótulo se leería «Aminan Juegos Juegos».
 >
-> Ojo: el logo entregado (`Assets/Resources/Marca/AminaEstudio.png`) *dibuja* «AMINA
-> ESTUDIO», así que el pie usa un rótulo de texto en vez del PNG. Cuando haya un logo
-> redibujado con «AMINA JUEGOS», vuelve a ponerse como imagen.
+> Ojo: el logo entregado para el juego (`Assets/Resources/Marca/AminaEstudio.png`, en el
+> proyecto de Unity) *dibuja dentro de la imagen* el nombre viejo y mal escrito, así que
+> el pie usa un rótulo de texto en vez del PNG. Cuando haya un logo redibujado que ponga
+> «AMINAN JUEGOS», vuelve a ponerse como imagen.
 
 > **Nada de promesas falsas.** La web **no** puede decir «sin compras», «sin registro»,
 > «sin recopilar datos» ni «sin conexión»: el juego lleva compras dentro de la app
