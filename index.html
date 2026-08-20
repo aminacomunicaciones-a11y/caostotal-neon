@@ -260,6 +260,10 @@
     -webkit-background-clip: text; background-clip: text; color: transparent;
     text-shadow: 0 0 26px rgba(53, 224, 242, .22);
   }
+  .marca-pie .rotulo-img {
+    display: block; width: 190px; height: auto; margin: 0 0 .8rem;
+    filter: drop-shadow(0 0 12px rgba(53, 224, 242, .3));
+  }
   footer h3 { margin: 0 0 .55rem; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta); }
   footer ul { list-style: none; margin: 0; padding: 0; }
   footer li { margin-bottom: .35rem; }
@@ -399,10 +403,10 @@
   <div class="hoja">
     <div class="pie-caja">
       <div class="marca-pie">
-        <!-- Rotulo en texto, no una imagen: el PNG de marca entregado dibuja
-             el nombre antiguo. Cuando haya un logo redibujado que ponga
-             "AMINAN", vuelve aqui una <img>. -->
-        <p class="rotulo">Aminan</p>
+        <!-- Logo redibujado del 2026-08-20: ya pone "AMINAN" bien escrito, asi que
+             vuelve como imagen (el mismo trazo que usa el juego en Marca/AminanEstudio.png). -->
+        <img class="rotulo-img" src="img/logo-aminan.png" width="988" height="208"
+             loading="lazy" alt="Aminan">
         <!-- Ojo con la frase de debajo: se lee pegada al rotulo, asi que no
              puede empezar por "Estudio" (nombre retirado, y Faussi no es un
              estudio). -->

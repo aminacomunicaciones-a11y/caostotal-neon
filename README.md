@@ -18,10 +18,9 @@ el campo **«Sitio web»** de la ficha de Google Play.
 > (Faussi no es un estudio). La frase de debajo se lee pegada al rótulo, así que
 > conviene releerlas juntas antes de cambiar cualquiera de las dos.
 >
-> Ojo: el logo entregado para el juego (`Assets/Resources/Marca/AminaEstudio.png`, en el
-> proyecto de Unity) *dibuja dentro de la imagen* el nombre viejo y mal escrito, así que
-> el pie usa un rótulo de texto en vez del PNG. Cuando haya un logo redibujado que ponga
-> «AMINAN», vuelve a ponerse como imagen.
+> El logo redibujado llegó el 2026-08-20: `img/logo-aminan.png` (copia de
+> `Assets/Resources/Marca/AminanEstudio.png` del proyecto de Unity) ya pone «AMINAN»
+> bien escrito, y el pie lo usa como imagen. El rótulo de texto que había antes ya no está.
 
 > **Nada de promesas falsas.** La web **no** puede decir «sin compras», «sin registro»,
 > «sin recopilar datos» ni «sin conexión»: el juego lleva compras dentro de la app
@@ -85,8 +84,8 @@ git push
 
 ## Las imágenes
 
-La web lleva **exactamente 4 imágenes**, las que entregó Faussi el 2026-08-10
-(5,8 MB de PNG → 212 KB de WebP):
+La web lleva **exactamente 5 imágenes**: las 4 que entregó Faussi el 2026-08-10
+(5,8 MB de PNG → 212 KB de WebP) más el logotipo AMINAN del 2026-08-20:
 
 | Fichero | Qué es | Dónde sale |
 |---|---|---|
@@ -94,6 +93,7 @@ La web lleva **exactamente 4 imágenes**, las que entregó Faussi el 2026-08-10
 | `captura-menu.webp` | Menú principal, mapa 1 Bosque de Silicio | Galería |
 | `captura-jefe-laseres.webp` | Jefe bajo fuego cruzado, arena roja | Galería |
 | `captura-jefe-enjambre.webp` | Jefa medusa rodeada de esbirros | Galería |
+| `logo-aminan.png` | El logotipo AMINAN de neón (el mismo del juego) | El pie |
 
 > ⚠️ **Ninguna imagen puede llevar la marca de agua de Gemini.** Las tres capturas de
 > la galería se cambiaron el 2026-08-10 justo por eso: dos de las anteriores traían el
