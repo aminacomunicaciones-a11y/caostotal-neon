@@ -1,6 +1,6 @@
-# Caos Total: Neon — web pública
+# Caos Total Neon — web pública
 
-Página pública del juego **Caos Total: Neon**, de **Aminan**. Es la URL que va en
+Página pública del juego **Caos Total Neon**, de **Aminan**. Es la URL que va en
 el campo **«Sitio web»** de la ficha de Google Play.
 
 > **Nombre de la marca: «Aminan».** A secas, y con **N al final**. Confirmado por
