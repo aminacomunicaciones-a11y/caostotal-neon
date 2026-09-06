@@ -7,68 +7,82 @@
      NO BORRAR: si desaparece, Google puede revocar la verificacion y hay que
      volver a dar de alta la propiedad. -->
 <meta name="google-site-verification" content="RnPQ1I2eJBhi1ttw0TTg2PzfdQUwvE7TLYFoWrcWxGg" />
-<title>Aminan — Caos Total Neon, survival arcade de oleadas para Android</title>
-<meta name="description" content="Aminan presenta Caos Total Neon, un survival arcade de oleadas con estética neón para Android: 17 armas, 20 fusiones únicas, más de 25 criaturas y jefes nombrados. Descarga gratis y sin anuncios.">
+<!-- El nombre del juego va DELANTE en el titulo: es lo que la gente teclea
+     en Google. "Aminan" ya lo pone Google encima del resultado, porque lo lee
+     de la portada del dominio (repo amina-raiz). -->
+<title>Caos Total Neon — survival arcade neón de oleadas para Android | Aminan</title>
+<meta name="description" content="Caos Total Neon es un survival arcade de oleadas con estética neón para Android: un mundo de magos devuelve el golpe a los aliens que lo arrasaron. 17 armas, 20 fusiones únicas, más de 25 criaturas y jefes nombrados. Descarga gratis.">
 <link rel="canonical" href="https://aminacomunicaciones-a11y.github.io/caostotal-neon/">
 <meta name="author" content="Aminan">
 <meta name="theme-color" content="#05070d">
-<link rel="icon" href="img/favicon.ico" sizes="32x32">
+<!-- El icono de la pestaña es el icono del JUEGO (el mismo que sale en el
+     movil), no el de la marca. OJO: el icono que Google pinta en los
+     resultados de busqueda lo coge de la RAIZ del dominio (repo amina-raiz,
+     /favicon.ico), no de aqui; por eso alli va el mismo juego de iconos. -->
+<link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" href="img/icon-16.png" sizes="16x16">
 <link rel="icon" type="image/png" href="img/icon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="img/icon-48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="img/icon-96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="img/icon-192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="img/icon-512.png" sizes="512x512">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <!-- Tarjeta al compartir el enlace (WhatsApp, X, Discord, Google) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aminan">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Aminan — Caos Total Neon, survival arcade de oleadas">
-<meta property="og:description" content="Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos. El juego de Aminan para Android: descarga gratis y sin anuncios.">
+<meta property="og:title" content="Caos Total Neon — survival arcade neón para Android">
+<meta property="og:description" content="Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos. Un mundo de magos se venga de los aliens que lo arrasaron. Gratis en Android, de Aminan.">
 <meta property="og:url" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/">
 <meta property="og:image" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Banner de Caos Total Neon: el título en neón junto a la mascota del juego, un pulpo neón coronado de ojos dorados.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Caos Total Neon — survival arcade neón para Android">
+<meta name="twitter:description" content="Sobrevive a la horda neón: fusiona armas, evoluciona y desata el caos. Gratis en Android, de Aminan.">
+<meta name="twitter:image" content="https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg">
 
-<!-- Datos estructurados. Tres piezas enlazadas entre si:
-     · WebSite  — como se llama ESTE sitio. Es lo que Google mira para poner
-                  el nombre del sitio encima del resultado de busqueda.
-     · Organization — quien lo firma, "Aminan".
-     · VideoGame — que es lo que se ofrece; habilita el resultado enriquecido. -->
+<!-- Datos estructurados. Dos piezas enlazadas entre si:
+     · VideoGame — que es lo que se ofrece; habilita el resultado enriquecido.
+                   Su "name" es lo que la gente busca: Caos Total Neon.
+     · Organization — quien lo firma, "Aminan". Mismo @id que en la portada del
+                   dominio (amina-raiz), para que Google entienda que es la
+                   misma entidad y no dos.
+     El WebSite (nombre del sitio) vive en la portada del dominio: Google solo
+     lee nombres de sitio a nivel de dominio, no de subcarpeta. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebSite",
-      "@id": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/#sitio",
-      "name": "Aminan",
-      "url": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/",
-      "inLanguage": "es",
-      "publisher": { "@id": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/#aminan" }
-    },
-    {
       "@type": "Organization",
-      "@id": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/#aminan",
+      "@id": "https://aminacomunicaciones-a11y.github.io/#aminan",
       "name": "Aminan",
-      "url": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/",
-      "email": "amina.comunicaciones@gmail.com"
+      "url": "https://aminacomunicaciones-a11y.github.io/",
+      "logo": "https://aminacomunicaciones-a11y.github.io/img/icon-512.png",
+      "email": "aminansoporte@gmail.com"
     },
     {
       "@type": "VideoGame",
+      "@id": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/#juego",
       "name": "Caos Total Neon",
-      "alternateName": "Caos Total Neon",
+      "alternateName": ["Caos Total: Neon", "CaosTotal Neon"],
       "url": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/",
-      "image": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg",
-      "description": "Survival arcade de oleadas con estética neón para Android, de Aminan. Fusiona 17 armas en 20 combinaciones únicas, enfréntate a jefes nombrados y progresa entre partidas. Descarga gratis y sin anuncios, con compras opcionales dentro del juego.",
+      "image": [
+        "https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/og-caos-total-neon.jpg",
+        "https://aminacomunicaciones-a11y.github.io/caostotal-neon/img/icon-512.png"
+      ],
+      "description": "Survival arcade de oleadas con estética neón para Android, de Aminan. Un mundo de magos, arrasado por una invasión alienígena, devuelve el golpe mundo a mundo. Fusiona 17 armas en 20 combinaciones únicas, enfréntate a jefes nombrados y progresa entre partidas. Descarga gratis, con compras opcionales dentro del juego.",
       "inLanguage": "es",
       "genre": ["Arcade", "Acción", "Supervivencia", "Roguelite"],
+      "keywords": "survival arcade, oleadas, neón, roguelite, bullet heaven, Android, magos, aliens",
       "gamePlatform": "Android",
       "operatingSystem": "Android",
       "applicationCategory": "GameApplication",
-      "author": { "@id": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/#aminan" },
-      "publisher": { "@id": "https://aminacomunicaciones-a11y.github.io/caostotal-neon/#aminan" },
+      "author": { "@id": "https://aminacomunicaciones-a11y.github.io/#aminan" },
+      "publisher": { "@id": "https://aminacomunicaciones-a11y.github.io/#aminan" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder", "description": "Descarga gratuita con compras opcionales dentro de la aplicación" }
     }
   ]
@@ -164,7 +178,7 @@
     border-color: var(--linea); color: var(--tinta); background: rgba(255,255,255,.03);
   }
   .boton--fantasma:hover { background: rgba(53, 224, 242, .1); transform: translateY(-2px); }
-  /* El correo son 30 caracteres: letra y margenes mas justos para que quepa
+  /* El correo son 23 caracteres: letra y margenes mas justos para que quepa
      en UNA linea hasta en un movil estrecho. */
   .boton--correo { font-size: .95rem; padding-left: 1.1rem; padding-right: 1.1rem; }
 
@@ -216,9 +230,8 @@
 
   /* ---------- CAPTURAS ---------- */
   /* Cuadricula normal: todas las capturas a la vista, en filas y columnas.
-     Nada de carrusel ni desplazamiento lateral. */
-  /* Tres capturas de proporciones distintas (dos verticales y una mas ancha):
-     se alinean por arriba y cada una conserva su forma, sin recortar interfaz. */
+     Nada de carrusel ni desplazamiento lateral. Se alinean por arriba y cada
+     una conserva su forma, sin recortar interfaz. */
   .galeria {
     display: grid; gap: 1.75rem 1.25rem; padding: .5rem 0 1rem;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -233,6 +246,7 @@
   .galeria figcaption {
     margin-top: .65rem; font-size: .85rem; color: var(--suave); text-align: center;
   }
+
   /* ---------- LLAMADA FINAL ---------- */
   .cierre {
     margin: 4.5rem 0 0; padding: 3rem 1.5rem; text-align: center;
@@ -243,6 +257,24 @@
   }
   .cierre h2 { margin-bottom: .75rem; }
   .cierre p { color: var(--suave); max-width: 32rem; margin: 0 auto 1.8rem; }
+
+  /* ---------- LA HISTORIA ---------- */
+  /* Abajo del todo, a peticion de Faussi (6-sep-2026): un texto corto con el
+     trasfondo del juego. Va en columna estrecha y con el icono del juego al
+     lado, como la primera pagina de un manual. */
+  .historia { padding-bottom: 0; }
+  .historia-caja {
+    display: grid; gap: 1.5rem 2rem; align-items: start;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  @media (min-width: 40rem) { .historia-caja { grid-template-columns: 6.5rem minmax(0, 1fr); } }
+  .historia-icono {
+    width: 6.5rem; height: 6.5rem;
+    filter: drop-shadow(0 0 18px rgba(53, 224, 242, .35));
+  }
+  .historia p { margin: 0 0 1rem; max-width: 40rem; color: var(--tinta); }
+  .historia p:last-child { margin-bottom: 0; }
+  .historia .remate { color: var(--neon); font-weight: 700; }
 
   /* ---------- PIE ---------- */
   footer {
@@ -255,12 +287,6 @@
     filter: blur(.5px); opacity: .7;
   }
   .pie-caja { display: flex; flex-wrap: wrap; gap: 1.75rem; justify-content: space-between; align-items: flex-start; }
-  .marca-pie .rotulo {
-    margin: 0 0 .6rem; font-size: 1.75rem; font-weight: 800; letter-spacing: .06em;
-    background: linear-gradient(92deg, var(--neon) 10%, #cfefff 45%, var(--lila) 92%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    text-shadow: 0 0 26px rgba(53, 224, 242, .22);
-  }
   .marca-pie .rotulo-img {
     display: block; width: 190px; height: auto; margin: 0 0 .8rem;
     filter: drop-shadow(0 0 12px rgba(53, 224, 242, .3));
@@ -313,9 +339,9 @@
     <hr class="filo">
     <p class="entradilla">
       <strong>Caos Total Neon</strong> es un survival arcade de acción con estética neón:
-      partidas rápidas, vista cenital y una horda de criaturas luminosas que no deja de crecer.
-      Cada subida de nivel te hace más absurdo de poderoso, hasta que la pantalla entera
-      es tuya. Diseñado para jugar de pie y con una mano.
+      partidas rápidas, vista cenital y una horda de criaturas alienígenas luminosas que no
+      deja de crecer. Eliges a tu mago, y cada subida de nivel te hace más absurdo de
+      poderoso, hasta que la pantalla entera es tuya. Diseñado para jugar de pie y con una mano.
     </p>
 
     <div class="rejilla">
@@ -326,14 +352,14 @@
            salta sola de cuerpo en cuerpo, el Faro de Aniquilación que barre 360°.</p>
       </article>
       <article class="tarjeta">
-        <h3><span class="cifra">25+</span>Una fauna que brilla (y muerde)</h3>
-        <p>Más de 25 criaturas gelatinosas con luz propia, élites con apellido, mini-jefes y
+        <h3><span class="cifra">25+</span>Una invasión que brilla (y muerde)</h3>
+        <p>Más de 25 criaturas alienígenas con luz propia, élites con apellido, mini-jefes y
            jefes nombrados con su propia música de combate.</p>
       </article>
       <article class="tarjeta">
         <h3><span class="cifra">∞</span>Progresa entre partidas</h3>
-        <p>Árbol permanente del personaje, logros con recompensa, misiones, bestiario
-           coleccionable y fondos desbloqueables con su propia banda sonora.</p>
+        <p>Árbol permanente de cada mago, logros con recompensa, misiones, bestiario
+           coleccionable, ranking semanal y mundos desbloqueables con su propia banda sonora.</p>
       </article>
       <article class="tarjeta">
         <h3><span class="cifra">120</span>Hecho para tu móvil</h3>
@@ -365,27 +391,6 @@
     </div>
   </section>
 
-  <section id="claridad">
-    <h2>Claro desde el <span class="acento">principio</span></h2>
-    <hr class="filo">
-    <p class="entradilla">
-      Preferimos contarte aquí cómo funciona el juego antes de que te lo encuentres dentro.
-    </p>
-    <div class="rejilla">
-      <article class="tarjeta">
-        <h3>Gratis y sin anuncios</h3>
-        <p>El juego se descarga gratis y no lleva publicidad: ni banners, ni vídeos que aguantar
-           para seguir jugando. Ninguna partida se corta por en medio.</p>
-      </article>
-      <article class="tarjeta">
-        <h3>Compras opcionales dentro del juego</h3>
-        <p>Los Astros, la moneda rara, se ganan jugando: cayendo jefes y completando logros.
-           Si prefieres ir más rápido, dentro del juego puedes comprar packs de Astros. Es un
-           atajo, no un peaje.</p>
-      </article>
-    </div>
-  </section>
-
   <section class="cierre">
     <h2>Próximamente</h2>
     <p>
@@ -394,7 +399,31 @@
     </p>
     <div class="botones">
       <p class="proximamente">Próximamente</p>
-      <a class="boton boton--fantasma boton--correo" href="mailto:amina.comunicaciones@gmail.com">amina.comunicaciones@gmail.com</a>
+      <a class="boton boton--fantasma boton--correo" href="mailto:aminansoporte@gmail.com">aminansoporte@gmail.com</a>
+    </div>
+  </section>
+
+  <section id="historia" class="historia">
+    <h2>La <span class="acento">historia</span></h2>
+    <hr class="filo">
+    <div class="historia-caja">
+      <img class="historia-icono" src="img/icon-192.png" width="192" height="192" loading="lazy"
+           alt="Icono de Caos Total Neon: una criatura redonda de neón azul, con ojos amarillos y colmillos.">
+      <div>
+        <p>
+          Hubo un mundo donde la magia era lo normal: torres que brillaban de noche, hechizos
+          de andar por casa y magos discutiendo en la plaza. Hasta que el cielo se llenó de
+          luces que no eran suyas. Una flota alienígena cayó sobre él sin avisar y lo dejó en
+          ruinas.
+        </p>
+        <p>
+          Los magos que quedaron no se escondieron. Aprendieron a leer las estrellas por las
+          que habían llegado los invasores, abrieron un portal tras otro y hoy devuelven la
+          visita: mundo a mundo, oleada a oleada, hasta que no quede un solo cielo alienígena
+          tranquilo.
+        </p>
+        <p class="remate">Tú eres uno de esos magos. La venganza empieza en la primera oleada.</p>
+      </div>
     </div>
   </section>
 
@@ -417,8 +446,17 @@
       <div>
         <h3>Contacto</h3>
         <ul>
-          <li><a href="mailto:amina.comunicaciones@gmail.com">amina.comunicaciones@gmail.com</a></li>
+          <li><a href="mailto:aminansoporte@gmail.com">aminansoporte@gmail.com</a></li>
           <li>Prensa, soporte y dudas del juego</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="https://aminacomunicaciones-a11y.github.io/caostotal-legal/privacidad.html">Política de privacidad</a></li>
+          <li><a href="https://aminacomunicaciones-a11y.github.io/caostotal-legal/condiciones.html">Condiciones de uso</a></li>
+          <li><a href="https://aminacomunicaciones-a11y.github.io/caostotal-legal/borrar-datos.html">Borrar tu cuenta y tus datos</a></li>
         </ul>
       </div>
 

@@ -9,10 +9,13 @@ el campo **«Sitio web»** de la ficha de Google Play.
 > El nombre va en el `<title>`, en las meta, en el Open Graph, en los datos
 > estructurados, en la portada y en el pie.
 >
-> ⚠️ **Dos cadenas que llevan la grafía vieja y NO se pueden tocar**, porque son
-> direcciones reales y romperlas rompe la web:
-> el correo `amina.comunicaciones@gmail.com` y el dominio
+> ⚠️ **Una cadena lleva la grafía vieja y NO se puede tocar**, porque es una
+> dirección real y romperla rompe la web: el dominio
 > `aminacomunicaciones-a11y.github.io`.
+>
+> El buzón de contacto es **`aminansoporte@gmail.com`** desde el 6-sep-2026, el mismo
+> que usan las páginas legales y la ficha de Play. El viejo `amina.comunicaciones@…`
+> ya no aparece en la web.
 >
 > Regla al escribir el pie: **la palabra «estudio» no puede aparecer en pantalla**
 > (Faussi no es un estudio). La frase de debajo se lee pegada al rótulo, así que
@@ -23,10 +26,17 @@ el campo **«Sitio web»** de la ficha de Google Play.
 > bien escrito, y el pie lo usa como imagen. El rótulo de texto que había antes ya no está.
 
 > **Nada de promesas falsas.** La web **no** puede decir «sin compras», «sin registro»,
-> «sin recopilar datos» ni «sin conexión»: el juego lleva compras dentro de la app
-> (packs de Astros, con Unity Purchasing) y va a tener cuentas con recopilación de datos.
-> Sí es cierto y sí se dice: descarga gratis y sin anuncios (no hay ningún SDK de
-> publicidad en el proyecto).
+> «sin recopilar datos», «sin conexión» **ni «sin anuncios»**: el juego lleva compras
+> dentro de la app (packs de Astros, con Unity Purchasing), cuentas con recopilación de
+> datos y, desde el 29-ago-2026, anuncios de Google AdMob (intersticial al final de la
+> partida y vídeo voluntario para doblar la Esencia). Sí es cierto y sí se dice:
+> descarga gratis. El apartado «Claro desde el principio» que hablaba de todo esto lo
+> retiró Faussi entero el 6-sep-2026.
+
+> **La historia** (sección `#historia`, abajo del todo, 6-sep-2026): un mundo de
+> magos arrasado por una invasión alienígena, y los magos que se vengan atacando los
+> mundos de los aliens mundo a mundo. Está redactada por Claude sobre la sinopsis de
+> Faussi; si el juego cambia el trasfondo, este texto va detrás.
 
 **En vivo:** https://aminacomunicaciones-a11y.github.io/caostotal-neon/
 
@@ -35,7 +45,7 @@ el campo **«Sitio web»** de la ficha de Google Play.
 | Fichero | Para qué |
 |---|---|
 | `index.html` | La página entera: HTML + CSS en un solo archivo, sin dependencias externas |
-| `img/` | Capturas, icono, gráfico destacado y logo del estudio, ya optimizados para web |
+| `img/` | Capturas, icono del juego (pestaña), gráfico destacado y logo de la marca, ya optimizados para web |
 | `robots.txt`, `sitemap.xml` | Para que Google la encuentre e indexe |
 
 No hay scripts, ni fuentes externas, ni CDN, ni analítica: la página no hace ni una
@@ -101,8 +111,17 @@ La web lleva **exactamente 5 imágenes**: las 4 que entregó Faussi el 2026-08-1
 > esquinas ampliadas. El banner está comprobado y limpio.
 
 `og-caos-total-neon.jpg` se genera a partir del banner y solo se usa al compartir el
-enlace. `icono.png` y `favicon.png` no se ven en la página: son el icono de la pestaña
-y el de la pantalla de inicio.
+enlace. `favicon.ico`, `icon-16/32/48/96/192/512.png` y `apple-touch-icon.png` son el
+**icono del juego** (el bicho azul de `Assets/CharacterArt/icono_wikivampiro.png`, el
+mismo que sale en el móvil), recortado del marco negro y con esquinas redondeadas.
+Desde el 6-sep-2026 sustituyen a la A de Aminan en la pestaña, y `icon-192.png` se
+ve también en la sección de la historia.
+
+> ⚠️ **El icono que Google pinta en los resultados NO sale de aquí.** Google solo
+> admite un favicon por dominio y lo lee de la portada raíz
+> (`aminacomunicaciones-a11y.github.io/favicon.ico`, repo `amina-raiz`). Por eso el
+> mismo juego de iconos está también allí. Si se cambia el icono, hay que cambiarlo
+> en los dos repos.
 
 Como el banner ya dibuja el nombre del juego, el `<h1>` va con la clase
 `.oculto-visual`: sigue estando para Google y los lectores de pantalla, pero no se
