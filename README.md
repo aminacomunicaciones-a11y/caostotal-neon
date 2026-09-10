@@ -54,7 +54,7 @@ sola petición fuera de este dominio. Igual que la [página legal](https://githu
 ## El juego ya está en Google Play (10-sep-2026)
 
 Salió en abierto el 10-sep-2026. En la tienda se llama **«Caos Total Neon: Supervivencia»**.
-Los avisos de «Próximamente» se quitaron; los dos botones «Descargar en Google Play»
+Los avisos de que el juego aún no había salido se quitaron; los dos botones «Descargar en Google Play»
 (portada y sección de cierre) y el JSON-LD (`installUrl`, `sameAs`, `offers.url`, con
 `availability` `InStock`) apuntan a la ficha pública:
 
@@ -64,11 +64,23 @@ https://play.google.com/store/apps/details?id=com.caostotalgames.caostotal
 
 El icono del botón es un triángulo de «play» genérico, **no** el logotipo de Google Play.
 
-## SEO: las seis palabras
+## SEO: el nombre y las seis palabras
 
-El `<title>` y la meta `description` llevan, **los dos**, las palabras por las que
-queremos que encuentren la web: **Caos Total Neon, supervivencia, oleadas, roguelike,
-magos, Android**. Si se reescriben, que no se caiga ninguna.
+El nombre es **«Caos Total Neon»**, sin dos puntos entre «Total» y «Neon». Esa grafía
+vieja se retiró y el 10-sep-2026 Google todavía tenía guardado el título antiguo: no
+puede volver a aparecer en ningún sitio de la web (título, meta, Open Graph, JSON-LD,
+textos, comentarios). La única forma con dos puntos que vale es el nombre de la tienda,
+«Caos Total Neon: Supervivencia».
+
+El `<title>` empieza por el nombre exacto y lleva las palabras del género
+(supervivencia, roguelike, oleadas, Android). La meta `description` lleva las seis:
+**Caos Total Neon, supervivencia, oleadas, roguelike, magos, Android**. Si se
+reescriben, que no se caiga ninguna.
+
+Páginas del dominio a 10-sep-2026: la portada (`/`), esta web (`/caostotal-neon/`, una
+sola página) y las legales (`/caostotal-legal/`: `index`, `privacidad`, `condiciones`,
+`borrar-datos`). Los dos sitemaps (`/sitemap.xml` y `/caostotal-neon/sitemap.xml`)
+recogen la portada y esta web; las legales no están en ninguno.
 
 ## Google Search Console
 
