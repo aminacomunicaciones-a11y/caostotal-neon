@@ -51,20 +51,40 @@ el campo **«Sitio web»** de la ficha de Google Play.
 No hay scripts, ni fuentes externas, ni CDN, ni analítica: la página no hace ni una
 sola petición fuera de este dominio. Igual que la [página legal](https://github.com/aminacomunicaciones-a11y/caostotal-legal).
 
-## Cambio pendiente: cuando el juego salga en abierto
+## El juego ya está en Google Play (10-sep-2026)
 
-Ahora mismo los botones de descarga apuntan al alta de la **prueba cerrada**
-(`play.google.com/apps/testing/...`), porque la ficha pública todavía responde 404.
-
-Cuando el juego se publique, busca en `index.html` los dos `href` de
-`apps/testing` y cámbialos por:
+Salió en abierto el 10-sep-2026. En la tienda se llama **«Caos Total Neon: Supervivencia»**.
+Los avisos de «Próximamente» se quitaron; los dos botones «Descargar en Google Play»
+(portada y sección de cierre) y el JSON-LD (`installUrl`, `sameAs`, `offers.url`, con
+`availability` `InStock`) apuntan a la ficha pública:
 
 ```
 https://play.google.com/store/apps/details?id=com.caostotalgames.caostotal
 ```
 
-Y ajusta el texto del sello («Prueba cerrada abierta en Google Play») y de la
-sección de cierre.
+El icono del botón es un triángulo de «play» genérico, **no** el logotipo de Google Play.
+
+## SEO: las seis palabras
+
+El `<title>` y la meta `description` llevan, **los dos**, las palabras por las que
+queremos que encuentren la web: **Caos Total Neon, supervivencia, oleadas, roguelike,
+magos, Android**. Si se reescriben, que no se caiga ninguna.
+
+## Google Search Console
+
+Propiedad de **prefijo de URL**: `https://aminacomunicaciones-a11y.github.io/caostotal-neon/`.
+Valen los dos métodos, porque GitHub Pages sirve la raíz de `main` tal cual:
+
+- **Etiqueta HTML (el que se usa):** la `<meta name="google-site-verification">` va en el
+  `<head>` de `index.html`, justo debajo del `viewport`. El token es de la **cuenta** de
+  Google, no de la propiedad: si Search Console enseña el mismo `content`, ya está puesto.
+  Si enseña otro (otra cuenta), se **añade** una segunda línea debajo; la vieja no se borra.
+- **Fichero HTML:** el `googleXXXX.html` que da Google se deja en la **raíz de este repo**
+  (junto a `index.html`) y queda en `…/caostotal-neon/googleXXXX.html`. Jekyll lo copia
+  tal cual porque no lleva cabecera YAML.
+
+Una vez verificada: enviar el sitemap `https://aminacomunicaciones-a11y.github.io/caostotal-neon/sitemap.xml`
+y pedir indexación de la portada en «Inspección de URL».
 
 ## Pendiente: dominio propio (NO comprado)
 
