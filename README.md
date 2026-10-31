@@ -72,8 +72,8 @@ puede volver a aparecer en ningún sitio de la web (título, meta, Open Graph, J
 textos, comentarios). La única forma con dos puntos que vale es el nombre de la tienda,
 «Caos Total Neon: Supervivencia».
 
-El `<title>` empieza por el nombre exacto y lleva las palabras del género
-(supervivencia, roguelike, oleadas, Android). La meta `description` lleva las seis:
+El `<title>` (31-oct-2026) empieza por el nombre exacto y sigue con el de la tienda:
+«Caos Total Neon: Supervivencia — juego gratis para Android | Aminan». La meta `description` lleva las seis:
 **Caos Total Neon, supervivencia, oleadas, roguelike, magos, Android**. Si se
 reescriben, que no se caiga ninguna.
 
@@ -155,10 +155,12 @@ ve también en la sección de la historia.
 > mismo juego de iconos está también allí. Si se cambia el icono, hay que cambiarlo
 > en los dos repos.
 
-Como el banner ya dibuja el nombre del juego, el `<h1>` va con la clase
-`.oculto-visual`: sigue estando para Google y los lectores de pantalla, pero no se
-repite en pantalla. **Si algún día se quita el banner, hay que volver a hacer visible
-ese `<h1>`.**
+El `<h1>` va visible debajo del banner desde el 31-oct-2026, aunque el banner ya dibuje
+el nombre: es la señal más clara para Google de cómo se llama la página.
+
+Las cifras de la web (8 magos, 18 armas, 18 fusiones, 6 mapas y 6 jefes) salen de
+`NeonCharacterCatalog`, `GameManager.NeonKit`, `GameManager.NeonFusions` y `MapCatalog`
+del juego (rama `horno`), a 31-oct-2026. Si el juego cambia, estas van detrás.
 
 Para añadir capturas nuevas: WebP calidad 82, 600 px de ancho las verticales y unos
 700 px las más apaisadas. No se recortan: las pantallas de menú llevan texto de
